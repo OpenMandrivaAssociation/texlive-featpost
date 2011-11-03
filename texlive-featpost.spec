@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /graphics/metapost/contrib/macros/featpost
+# catalog-date 2007-02-22 16:49:05 +0100
+# catalog-license gpl
+# catalog-version 0.6.7
 Name:		texlive-featpost
 Version:	0.6.7
 Release:	1
@@ -221,6 +227,7 @@ among other things.
 %doc %{_texmfdistdir}/doc/metapost/featpost/typesetinspace/mp-tool.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/xcmd/README.xcmd
 %doc %{_texmfdistdir}/doc/metapost/featpost/xcmd/xmpost
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -231,3 +238,5 @@ among other things.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar metapost doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
