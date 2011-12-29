@@ -23,16 +23,8 @@ These macros allow the production of three-dimensional schemes
 containing: angles, circles, cylinders, cones and spheres,
 among other things.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -520,7 +512,6 @@ among other things.
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/vanallenbelt.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/verygoodcone.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/xraycamera.mp
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -531,5 +522,3 @@ among other things.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar metapost doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
