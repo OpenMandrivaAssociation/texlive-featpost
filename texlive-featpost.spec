@@ -6,7 +6,7 @@
 # catalog-version 0.8.2
 Name:		texlive-featpost
 Version:	0.8.2
-Release:	1
+Release:	2
 Summary:	MetaPost macros for 3D
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/metapost/contrib/macros/featpost
