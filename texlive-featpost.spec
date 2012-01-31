@@ -1,12 +1,12 @@
-# revision 24738
+# revision 25242
 # category Package
 # catalog-ctan /graphics/metapost/contrib/macros/featpost
-# catalog-date 2011-11-24 18:09:37 +0100
+# catalog-date 2012-01-30 09:57:13 +0100
 # catalog-license gpl
-# catalog-version 0.8.2
+# catalog-version 0.8.3
 Name:		texlive-featpost
-Version:	0.8.2
-Release:	2
+Version:	0.8.3
+Release:	1
 Summary:	MetaPost macros for 3D
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/metapost/contrib/macros/featpost
@@ -33,8 +33,10 @@ among other things.
 
 #-----------------------------------------------------------------------
 %files
+%{_texmfdistdir}/metapost/featpost/featpost.mp
 %{_texmfdistdir}/metapost/featpost/featpost3Dplus2D.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/COMPILE.sh
+%doc %{_texmfdistdir}/doc/metapost/featpost/README
 %doc %{_texmfdistdir}/doc/metapost/featpost/allps/acmaglev.1
 %doc %{_texmfdistdir}/doc/metapost/featpost/allps/ahoraesglobal.1
 %doc %{_texmfdistdir}/doc/metapost/featpost/allps/aledlogo.1
@@ -134,7 +136,6 @@ among other things.
 %doc %{_texmfdistdir}/doc/metapost/featpost/allps/integerbars.1
 %doc %{_texmfdistdir}/doc/metapost/featpost/allps/integratorfigures.1
 %doc %{_texmfdistdir}/doc/metapost/featpost/allps/integratorfigures.2
-%doc %{_texmfdistdir}/doc/metapost/featpost/allps/intersection2D.1
 %doc %{_texmfdistdir}/doc/metapost/featpost/allps/joinedemptylines.1
 %doc %{_texmfdistdir}/doc/metapost/featpost/allps/kindofcube.1
 %doc %{_texmfdistdir}/doc/metapost/featpost/allps/kindofcube.2
@@ -255,6 +256,7 @@ among other things.
 %doc %{_texmfdistdir}/doc/metapost/featpost/allps/rigorousdiscoptions.1
 %doc %{_texmfdistdir}/doc/metapost/featpost/allps/rigorousfearpath.1
 %doc %{_texmfdistdir}/doc/metapost/featpost/allps/rmnbob.1
+%doc %{_texmfdistdir}/doc/metapost/featpost/allps/ropepatterns.1
 %doc %{_texmfdistdir}/doc/metapost/featpost/allps/rotatnlc.1
 %doc %{_texmfdistdir}/doc/metapost/featpost/allps/rungekuttasecond.1
 %doc %{_texmfdistdir}/doc/metapost/featpost/allps/rungekuttasecond.2
@@ -322,23 +324,65 @@ among other things.
 %doc %{_texmfdistdir}/doc/metapost/featpost/allps/verygoodcone.1
 %doc %{_texmfdistdir}/doc/metapost/featpost/allps/xraycamera.1
 %doc %{_texmfdistdir}/doc/metapost/featpost/doc/FeatPostExemplifier.ps.bz2
-%doc %{_texmfdistdir}/doc/metapost/featpost/doc/featpostbeamer.aux
-%doc %{_texmfdistdir}/doc/metapost/featpost/doc/featpostbeamer.log
-%doc %{_texmfdistdir}/doc/metapost/featpost/doc/featpostbeamer.nav
-%doc %{_texmfdistdir}/doc/metapost/featpost/doc/featpostbeamer.out
 %doc %{_texmfdistdir}/doc/metapost/featpost/doc/featpostbeamer.pdf
-%doc %{_texmfdistdir}/doc/metapost/featpost/doc/featpostbeamer.snm
 %doc %{_texmfdistdir}/doc/metapost/featpost/doc/featpostbeamer.tex
-%doc %{_texmfdistdir}/doc/metapost/featpost/doc/featpostbeamer.toc
 %doc %{_texmfdistdir}/doc/metapost/featpost/doc/featpostdocsource.tex
 %doc %{_texmfdistdir}/doc/metapost/featpost/doc/featpostmanual.aux
 %doc %{_texmfdistdir}/doc/metapost/featpost/doc/featpostmanual.log
-%doc %{_texmfdistdir}/doc/metapost/featpost/doc/featpostmanual.nav
 %doc %{_texmfdistdir}/doc/metapost/featpost/doc/featpostmanual.out
 %doc %{_texmfdistdir}/doc/metapost/featpost/doc/featpostmanual.pdf
-%doc %{_texmfdistdir}/doc/metapost/featpost/doc/featpostmanual.snm
 %doc %{_texmfdistdir}/doc/metapost/featpost/doc/featpostmanual.tex
 %doc %{_texmfdistdir}/doc/metapost/featpost/doc/featpostmanual.toc
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles.zip
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/3.eps
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/3.jpeg
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/3.pgm
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/CompanionsCollection.jpg
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/Diagram1.1
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/Diagram1.dia
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/Diagram1.mp
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/KnuthCollection.jpg
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/dia.png
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/fekslatexmp.1
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/fekslatexmp.mp
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/intersection2D.1
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/intersection2D.mp
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/metapostpropaganda.png
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/minimal-1.mps
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/minimal-1.pdf
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/minimal.jpeg
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/minimal.jpg
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/minimal.mp
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/minimal.png
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/pifpaf.jpeg
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/pifpafphoto.jpg
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/pifpafpropaganda.0
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/pifpafpropaganda.1
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/pifpafpropaganda.10
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/pifpafpropaganda.11
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/pifpafpropaganda.12
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/pifpafpropaganda.13
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/pifpafpropaganda.14
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/pifpafpropaganda.15
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/pifpafpropaganda.2
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/pifpafpropaganda.3
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/pifpafpropaganda.4
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/pifpafpropaganda.5
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/pifpafpropaganda.6
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/pifpafpropaganda.7
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/pifpafpropaganda.8
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/pifpafpropaganda.9
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/pifpafpropaganda.log
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/pifpafpropaganda.mp
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/recursives.2
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/recursives.mp
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/sriyantrafinal-1.svg
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/sriyantrafinal.mp
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/todo.jpg
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/workflow-from-mpman-charts.1
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/workflow-from-mpman-charts.2
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/workflow-from-mpman-charts.mp
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/xfig.png
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/acmaglev.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/ahoraesglobal.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/aledlogo.mp
@@ -346,7 +390,6 @@ among other things.
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/antimattermeteor.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/bananadimmer.log
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/bananadimmer.mp
-%doc %{_texmfdistdir}/doc/metapost/featpost/example/bananadimmer.mp~
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/borderframetest.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/brownellips.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/bstr.mp
@@ -406,7 +449,6 @@ among other things.
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/inductionbob.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/integerbars.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/integratorfigures.mp
-%doc %{_texmfdistdir}/doc/metapost/featpost/example/intersection2D.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/joinedemptylines.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/kindofcube.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/kindofcuber.mp
@@ -419,7 +461,6 @@ among other things.
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/matricskoc.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/metalcharge.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/mptoolcone.mp
-%doc %{_texmfdistdir}/doc/metapost/featpost/example/mpxerr.tex
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/mypatent.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/mypatentpieces.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/mysquaresectionbar.mp
@@ -460,7 +501,6 @@ among other things.
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/resistcircuit.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/revolipsoid.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/revolvers.mp
-%doc %{_texmfdistdir}/doc/metapost/featpost/example/revolvers.mp~
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/rigorcubo.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/rigorouscircle.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/rigorouscone.mp
@@ -468,6 +508,7 @@ among other things.
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/rigorousdiscoptions.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/rigorousfearpath.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/rmnbob.mp
+%doc %{_texmfdistdir}/doc/metapost/featpost/example/ropepatterns.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/rotatnlc.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/rungekuttasecond.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/sal.mp
