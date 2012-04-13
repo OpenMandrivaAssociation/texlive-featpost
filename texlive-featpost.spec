@@ -1,11 +1,11 @@
-# revision 25331
+# revision 25828
 # category Package
 # catalog-ctan /graphics/metapost/contrib/macros/featpost
-# catalog-date 2012-02-07 18:03:52 +0100
+# catalog-date 2012-04-02 15:54:21 +0200
 # catalog-license gpl
-# catalog-version 0.8.4
+# catalog-version 0.8.5
 Name:		texlive-featpost
-Version:	0.8.4
+Version:	0.8.5
 Release:	1
 Summary:	MetaPost macros for 3D
 Group:		Publishing
@@ -43,8 +43,11 @@ among other things.
 %doc %{_texmfdistdir}/doc/metapost/featpost/doc/featpostdocsource.tex
 %doc %{_texmfdistdir}/doc/metapost/featpost/doc/featpostmanual.pdf
 %doc %{_texmfdistdir}/doc/metapost/featpost/doc/featpostmanual.tex
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/lastfiguretest.pdf
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/lastfiguretest.tex
 %doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropaganda.pdf
 %doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropaganda.tex
+%doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles.zip
 %doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/3.eps
 %doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/3.jpeg
 %doc %{_texmfdistdir}/doc/metapost/featpost/doc/metapostpropagandafiles/3.pgm
@@ -98,6 +101,7 @@ among other things.
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/aledlogo.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/anglinerigorouscircle.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/antimattermeteor.mp
+%doc %{_texmfdistdir}/doc/metapost/featpost/example/bananadimmer.log
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/bananadimmer.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/borderframetest.mp
 %doc %{_texmfdistdir}/doc/metapost/featpost/example/brownellips.mp
