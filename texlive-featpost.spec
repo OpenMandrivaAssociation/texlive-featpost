@@ -1,12 +1,12 @@
 Name:		texlive-featpost
-Version:	0.8.8
-Release:	2
+Version:	35346
+Release:	1
 Summary:	MetaPost macros for 3D
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/metapost/contrib/macros/featpost
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/featpost.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/featpost.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/featpost.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/featpost.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -18,12 +18,12 @@ containing: angles, circles, cylinders, cones and spheres,
 among other things.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -32,7 +32,7 @@ among other things.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
