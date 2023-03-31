@@ -1,6 +1,6 @@
 Name:		texlive-featpost
 Version:	35346
-Release:	1
+Release:	2
 Summary:	MetaPost macros for 3D
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/metapost/contrib/macros/featpost
