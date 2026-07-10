@@ -1,41 +1,24 @@
-Name:		texlive-featpost
-Version:	35346
-Release:	2
+%global tl_name featpost
+%global tl_revision 35346
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	0.8.8
+Release:	%{tl_revision}.1
 Summary:	MetaPost macros for 3D
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/graphics/metapost/contrib/macros/featpost
-License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/featpost.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/featpost.doc.r%{version}.tar.xz
+License:	gpl
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/featpost.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/featpost.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
 These macros allow the production of three-dimensional schemes
-containing: angles, circles, cylinders, cones and spheres,
-among other things.
+containing: angles, circles, cylinders, cones and spheres, among other
+things.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/metapost/featpost
-%doc %{_texmfdistdir}/doc/metapost/featpost
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar metapost doc %{buildroot}%{_texmfdistdir}
